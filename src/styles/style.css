@@ -410,12 +410,14 @@
   background: var(--bg);
   padding: var(--section-py) 0;
 }
+
 .flow-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   position: relative;
 }
+
 .flow-grid::before {
   content: '';
   position: absolute;
@@ -426,6 +428,7 @@
   background: linear-gradient(90deg, var(--primary) 0%, rgba(26, 60, 143, 0.2) 100%);
   z-index: 0;
 }
+
 .flow-step {
   display: flex;
   flex-direction: column;
@@ -434,6 +437,7 @@
   position: relative;
   z-index: 1;
 }
+
 .flow-num {
   width: 64px;
   height: 64px;
@@ -450,20 +454,98 @@
   box-shadow: 0 4px 16px rgba(26, 60, 143, 0.3);
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .flow-step:hover .flow-num {
   transform: scale(1.1);
   box-shadow: 0 8px 24px rgba(26, 60, 143, 0.4);
 }
+
 .flow-step h4 {
   font-size: 15.2px;
   font-weight: 700;
   margin-bottom: 4px;
   color: var(--text);
 }
+
 .flow-step p {
   font-size: 11.5px;
   letter-spacing: 1.15px;
   text-transform: uppercase;
   color: var(--text-light);
   font-weight: 600;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  background: var(--dark);
+  padding: 72px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: var(--white);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  margin-bottom: 36px;
+  padding: 0 16px;
+}
+
+.cta-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  padding: 0 16px;
+}
+
+.cta-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  transition: background 0.2s;
+}
+
+.cta-contact-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cta-contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-contact-icon.whatsapp {
+  background: var(--accent);
+}
+
+.cta-contact-icon.phone {
+  background: var(--primary);
+}
+
+.cta-contact-info small {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.cta-contact-info strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  font-family: var(--font-heading);
+  white-space: nowrap;
 }
