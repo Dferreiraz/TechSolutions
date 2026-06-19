@@ -404,3 +404,66 @@
   text-transform: uppercase;
   color: var(--text);
 }
+
+/* ===== FLOW / PROCESS ===== */
+.flow {
+  background: var(--bg);
+  padding: var(--section-py) 0;
+}
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.flow-grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(26, 60, 143, 0.2) 100%);
+  z-index: 0;
+}
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.flow-num {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 19.2px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(26, 60, 143, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.flow-step:hover .flow-num {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(26, 60, 143, 0.4);
+}
+.flow-step h4 {
+  font-size: 15.2px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.flow-step p {
+  font-size: 11.5px;
+  letter-spacing: 1.15px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-weight: 600;
+}
