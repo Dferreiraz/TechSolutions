@@ -484,7 +484,7 @@
 
 .cta-section h2 {
   color: var(--white);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-size: 35.2px;
   margin-bottom: 36px;
   padding: 0 16px;
 }
@@ -533,8 +533,8 @@
 
 .cta-contact-info small {
   display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-size: 11.2px;
+  letter-spacing: 1.12px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 3px;
@@ -543,9 +543,97 @@
 
 .cta-contact-info strong {
   display: block;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 700;
   color: var(--white);
   font-family: var(--font-heading);
   white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section h2 {
+    font-size: 22.4px;
+  }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a1628;
+  padding: 48px 0 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand p {
+  font-size: 13.6px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+}
+.footer-logo span {
+  color: var(--accent);
+}
+.footer-col h5 {
+  color: var(--white);
+  font-size: 12.8px;
+  font-weight: 700;
+  letter-spacing: 1.28px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-col ul li a {
+  font-size: 13.4px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.3);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.author-site {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+.author-site a {
+  text-decoration: none;
+  color: var(--primary-light);
+  transition: color 0.3s ease;
+  font-size: 13.6px;
+}
+.author-site a:hover {
+  color: var(--accent);
+}
+
