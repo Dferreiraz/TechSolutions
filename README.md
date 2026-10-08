@@ -102,8 +102,8 @@ Você também pode utilizar uma extensão como **Live Server** no VS Code para e
 
 As seguintes tecnologias foram utilizadas no desenvolvimento:
 
-- HTML5
-- CSS3
+- REACT + Vite
+- Tailwind CSS3
 - JavaScript
 - Google Fonts
 - Git
@@ -116,19 +116,31 @@ As seguintes tecnologias foram utilizadas no desenvolvimento:
 ```text
 TechSolutions/
 │
+├── public/                  # Arquivos estáticos públicos (favicons, etc.)
+│
 ├── src/
 │   ├── assets/
-│   │   └── img/
-│   │       └── Rectangle.svg
+│   │   └── Rectangle.svg    # Imagem importada do projeto original
 │   │
-│   ├── js/
-│   │   └── scripts.js
+│   ├── components/          # Componentes React reutilizáveis
+│   │   ├── Header.jsx       # Cabeçalho com navegação e menu mobile
+│   │   ├── Hero.jsx         # Seção principal (banner)
+│   │   ├── Features.jsx     # Faixa de diferenciais
+│   │   ├── Services.jsx     # Catálogo de serviços
+│   │   ├── Flow.jsx         # Fluxo de manutenção (passo a passo)
+│   │   ├── Contact.jsx      # Seção de contato e horários
+│   │   ├── Footer.jsx       # Rodapé
+│   │   └── BackToTop.jsx    # Botão flutuante "voltar ao topo"
 │   │
-│   └── styles/
-│       ├── global.css
-│       └── style.css
+│   ├── App.jsx              # Componente raiz (monta toda a página)
+│   ├── main.jsx             # Ponto de entrada do React
+│   └── index.css            # Estilos globais + diretivas do Tailwind
 │
-├── index.html
+├── index.html               # HTML base do Vite
+├── package.json             # Dependências e scripts
+├── tailwind.config.js       # Configuração do Tailwind CSS
+├── postcss.config.js        # Configuração do PostCSS
+├── vite.config.js           # Configuração do Vite
 └── README.md
 ```
 
